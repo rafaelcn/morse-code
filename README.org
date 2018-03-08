@@ -11,31 +11,31 @@ You gonna need a C++ compiler complacent with the fourteenth standard
 
 To build with CMake it is pretty straight forward, you just need to do:
 
-```
+#+BEGIN_SRC bash
 cmake ./
 make
-```
+#+END_SRC
 
 ** Building without CMake
 
 You can either compile it directly with the compiler in hands
 
-```
+#+BEGIN_SRC
 g++ -Wall -pedantic -std=c++14 src/main.cpp src/morse.cpp -o bin/morse.out
-```
+#+END_SRC
 
 Or you can open the source files on a IDE of choice and compile them.
 
 
 * What is already done?
 
-[x] Encoder of Latin based alphabet to Morse code
-[] Decode Morse code to latin based alphabet
+-[x] Encoder of Latin based alphabet to Morse code
+-[] Decode Morse code to latin based alphabet
 
 ** Roadmap
 
-[] Implement a way to decode multiple words
-[] Implement the decode function
+-[] Implement a way to decode multiple words
+-[] Implement the decode function
 
 * Problems
 
