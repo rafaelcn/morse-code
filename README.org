@@ -7,7 +7,7 @@ Implement a simple encoder/decoder of Morse code.
 You gonna need a C++ compiler complacent with the fourteenth standard
 (/C++14/) and maybe CMake if you will.
 
-** Building with CMake
+*** Building with CMake
 
 To build with CMake it is pretty straight forward, you just need to do:
 
@@ -16,7 +16,7 @@ cmake ./
 make
 #+END_SRC
 
-** Building without CMake
+*** Building without CMake
 
 You can either compile it directly with the compiler in hands
 
@@ -29,13 +29,13 @@ Or you can open the source files on a IDE of choice and compile them.
 
 * What is already done?
 
--[x] Encoder of Latin based alphabet to Morse code
--[] Decode Morse code to latin based alphabet
+- [x] Encoder of Latin based alphabet to Morse code
+- [ ] Decode Morse code to latin based alphabet
 
-** Roadmap
+*** Roadmap
 
--[] Implement a way to decode multiple words
--[] Implement the decode function
+- [ ] Implement a way to decode multiple words
+- [ ] Implement the decode function
 
 * Problems
 
