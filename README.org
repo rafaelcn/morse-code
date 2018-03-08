@@ -9,7 +9,10 @@ Implement a simple encoder/decoder of Morse code.
 
 ** Roadmap
 
+- [ ] Implement a way to decode multiple words
+- [ ] Implement the decode function
+
 * Problems
 
 It is only encoding one word at time, I will fix that later, and the decode
-function is not working yet.
+function is not ready yet.
