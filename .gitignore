@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Build tools
+Makefile
+CMakeFiles/
+cmake_install.cmake
+
+# Executables
+morse.exe
+morse.out
