@@ -1,0 +1,15 @@
+* Purpose
+
+Implement a simple encoder/decoder of Morse code.
+
+** What is already done?
+
+- [x] Encoder of Latin based alphabet to Morse code
+- [] Decode Morse code to latin based alphabet
+
+** Roadmap
+
+* Problems
+
+It is only encoding one word at time, I will fix that later, and the decode
+function is not working yet.
