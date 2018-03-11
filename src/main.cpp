@@ -31,6 +31,11 @@
 
 void usage();
 
+/**
+ * @brief Builds a string of what to be encoded/decoded from argv
+ */
+std::string build_string(char **argv);
+
 int main(int argc, char **argv) {
 
     Morse m;
@@ -43,9 +48,9 @@ int main(int argc, char **argv) {
         return 0;
     } else {
         if (std::strcmp(argv[1], "--encode") == 0) {
-            std::cout << "Result: " << m.encode(argv[2]) << "\n";
+            std::cout << "Result: " << m.encode(build_string(argv)) << "\n";
         } else if (std::strcmp(argv[1], "--decode") == 0) {
-            std::cout << "Result: " << m.decode(argv[2]) << "\n";
+            std::cout << "Result: " << m.decode(build_string(argv)) << "\n";
         } else {
             std::cerr << "Invalid usage of the Morse encoder/decoder\n";
             usage();
@@ -68,4 +73,22 @@ void usage() {
               << "\t./morse --encode \"Rafael Campos Nunes\"\n"
               << "\t./morse --encode \"UTFPR\"\n"
               << "\t./morse --decode \"-.-.-...--\"\n";
+}
+
+std::string build_string(char **argv) {
+    std::string r;
+    // start building from the third char string
+    int i = 2;
+
+    while (argv[i] != NULL) {
+        r += argv[i];
+        r += " ";
+        i++;
+    }
+
+
+
+    std::cout << "Encoded string: " << r << "\n";
+
+    return r;
 }

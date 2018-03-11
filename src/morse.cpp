@@ -70,16 +70,20 @@ Morse::Morse() {
 }
 
 
-Morse::~Morse() {
-
-}
+Morse::~Morse() {}
 
 std::string Morse::encode(const std::string &s) {
     std::string r = "";
 
-    for (char c : s) {
-        auto morse = morse_alphabet.find(c);
-        r += morse->second;
+    for (const char c : s) {
+        auto morse = morse_alphabet.find(tolower(c));
+        if (morse_alphabet.find(tolower(c)) != morse_alphabet.end()) {
+            r += morse->second;
+        } else {
+            if (c == 32) {
+                r += " ";
+            }
+        }
     }
 
     return r;
@@ -90,6 +94,8 @@ std::string Morse::decode(const std::string &s) {
     // to ease the solution each morse character should be separated by a
     // space character, otherwise it would be interpreted erroneously
     std::string r = s;
+
+
 
     return r;
 }
