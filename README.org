@@ -29,12 +29,12 @@ Or you can open the source files on a IDE of choice and compile them.
 
 * What is already done?
 
-- [x] Encoder of Latin based alphabet to Morse code
+- [X] Encoder of Latin based alphabet to Morse code
 - [ ] Decode Morse code to latin based alphabet
 
 *** Roadmap
 
-- [ ] Implement a way to decode multiple words
+- [X] Implement a way to decode multiple words
 - [ ] Implement the decode function
 
 * Problems
