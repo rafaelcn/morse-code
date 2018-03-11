@@ -77,7 +77,7 @@ std::string Morse::encode(const std::string &s) {
 
     for (const char c : s) {
         auto morse = morse_alphabet.find(tolower(c));
-        if (morse_alphabet.find(tolower(c)) != morse_alphabet.end()) {
+        if (morse != morse_alphabet.end()) {
             r += morse->second;
         } else {
             if (c == 32) {
