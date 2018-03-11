@@ -26,18 +26,25 @@ g++ -Wall -pedantic -std=c++14 src/main.cpp src/morse.cpp -o bin/morse.out
 
 Or you can open the source files on a IDE of choice and compile them.
 
+* What you can do with it?
 
-* What is already done?
+Encode latin words to morse, decoding morse code is also possible but you should
+have in mind that each morse character should be separated by a space.
 
-- [X] Encoder of Latin based alphabet to Morse code
-- [ ] Decode Morse code to latin based alphabet
+*** Examples
 
-*** Roadmap
+#+BEGIN_SRC bash
+$ ./bin/morse --encode Rafael Campos Nunes
+Result: .-..-..-..-..-.. -.-..---.--.---... -...--.....
+#+END_SRC
 
-- [X] Implement a way to decode multiple words
-- [ ] Implement the decode function
+The encode function just separate words and not letters, so it should be a
+bit difficult to decode the message.
 
-* Problems
+On the other hand decoding information will give you a scrambled result, with
+each letter separated by a space character.
 
-It is only encoding one word at time, I will fix that later, and the decode
-function is not ready yet.
+#+BEGIN_SRC bash
+$ ./bin/morse --decode .-. .- ..-. .-
+Result: r a f a
+#+END_SRC
