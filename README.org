@@ -39,9 +39,7 @@ Result: .-..-..-..-..-.. -.-..---.--.---... -...--.....
 #+END_SRC
 
 The encode function just separate words and not letters, so it should be a
-bit difficult to decode the message.
-
-On the other hand decoding information will give you a scrambled result, with
+bit difficult to decode the message. On the other hand decoding information will give you a scrambled result, with
 each letter separated by a space character.
 
 #+BEGIN_SRC bash
