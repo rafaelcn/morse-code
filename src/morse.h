@@ -36,11 +36,11 @@ public:
     ~Morse();
 
     /**
-     *
+     * @brief Encodes latin letters into morse code
      */
     std::string encode(const std::string& s);
     /**
-     *
+     * @brief Decodes morse code into latin letters
      */
     std::string decode(const std::string& s);
 private:
