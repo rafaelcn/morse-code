@@ -28,16 +28,29 @@
 
 #include <map>
 #include <string>
+#include <vector>
 
 class Morse {
 public:
     Morse();
     ~Morse();
 
+    /**
+     *
+     */
     std::string encode(const std::string& s);
+    /**
+     *
+     */
     std::string decode(const std::string& s);
 private:
     std::map<char, std::string> morse_alphabet;
+
+    /**
+     * @brief Slices a string of morse code and return a vector of strings
+     * containing each morse character from the previous string.
+     */
+    std::vector<std::string> slice(const std::string &s);
 };
 
 #endif // MORSE_H

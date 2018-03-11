@@ -72,7 +72,7 @@ void usage() {
               << "Examples:\n"
               << "\t./morse --encode \"Rafael Campos Nunes\"\n"
               << "\t./morse --encode \"UTFPR\"\n"
-              << "\t./morse --decode \"-.-.-...--\"\n";
+              << "\t./morse --decode \"-. -.\"\n";
 }
 
 std::string build_string(char **argv) {
@@ -85,10 +85,6 @@ std::string build_string(char **argv) {
         r += " ";
         i++;
     }
-
-
-
-    std::cout << "Encoded string: " << r << "\n";
 
     return r;
 }

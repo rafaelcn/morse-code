@@ -93,9 +93,38 @@ std::string Morse::decode(const std::string &s) {
     // quite a pain to decode if there is a continuous string of morse code
     // to ease the solution each morse character should be separated by a
     // space character, otherwise it would be interpreted erroneously
-    std::string r = s;
+    std::string r;
 
-
+    // Yes, this is O(n^2) in time complexity
+    for(const auto &e : slice(s)) {
+        for (auto it = morse_alphabet.begin(); it != morse_alphabet.end();
+             it++) {
+            if (e == it->second) {
+                r += it->first;
+                r += " ";
+            }
+        }
+    }
 
     return r;
+}
+
+std::vector<std::string> Morse::slice(const std::string &s) {
+    std::vector<std::string> slices;
+
+    auto it = s.begin();
+    std::string buf;
+
+    while (it != s.end()) {
+        if (*it != 32) {
+            buf += *it;
+        } else {
+            slices.push_back(buf);
+            buf = "";
+        }
+
+        it++;
+    }
+
+    return slices;
 }
